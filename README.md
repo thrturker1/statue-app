@@ -13,6 +13,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 There are existing /home , /signup , /login routes in it.
 
-You can edit, change or hide your statue.
+You can edit, change or hide your status.
 
 Enjoy!!!
