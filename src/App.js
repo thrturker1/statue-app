@@ -1,19 +1,17 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import SignupPage from './pages/SignupPage';
-import LoginPage from './pages/LoginPage';
-import HomePage from './pages/HomePage';
+import "./App.css";
+import { HomePage } from "./pages/HomePage";
+import { LoginPage } from "./pages/LoginPage";
+import { NotFoundPage } from "./pages/ErrorPage";
+import { SignupPage } from "./pages/SignupPage";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+export const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/signup" component={SignupPage} />
-        <Route path="/login" component={LoginPage}/>
-        <Route path="/home" component={HomePage}/>
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
-}
-
-export default App;
+};

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const SignupForm = () => {
+export const SignupForm = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -31,6 +31,9 @@ const SignupForm = () => {
                             <button type="button" className="btn btn-primary" onClick={handleSignup}>
                                 Sign Up
                             </button>
+                            <Link to="/login" className="btn btn-link btn-md" role="button">
+                                Registered?
+                            </Link>
                         </div>
                     </form>
                 </div>
@@ -38,5 +41,3 @@ const SignupForm = () => {
         </div>
     );
 };
-
-export default SignupForm;

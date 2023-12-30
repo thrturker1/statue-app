@@ -1,8 +1,7 @@
-import React from 'react';
-import SignupForm from '../components/SignupForm';
-import './SignupPage.css';
+import './style.css';
+import { SignupForm } from '../../components/SignupForm';
 
-const SignupPage = () => {
+export const SignupPage = () => {
     return(
         <div className="signup-container">
             <h2 className="signup-title">Sign Up</h2>
@@ -10,5 +9,3 @@ const SignupPage = () => {
         </div>
     );
 };
-
-export default SignupPage;
