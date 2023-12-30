@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const LoginForm = () => {
+
+export const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-
+        
     };
 
     return (
@@ -27,6 +28,13 @@ const LoginForm = () => {
                                 Login
                             </button>
                         </div>
+
+                        <div className="mb-3 text-center">
+                            <p className="mb-0">Not registered?</p>                          
+                            <Link to="/signup" className="btn btn-link btn-md" role="button">
+                                Sign Up here
+                            </Link>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -34,4 +42,3 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
